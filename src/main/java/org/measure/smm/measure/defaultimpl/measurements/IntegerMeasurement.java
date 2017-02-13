@@ -28,4 +28,9 @@ public class IntegerMeasurement extends DefaultMeasurement {
 	public String toString() {
 		return  getValues().get("value").toString();
 	}
+	
+	@Override
+	public String getLabel() {
+		return getValues().get("value").toString();
+	}
 }

@@ -12,5 +12,6 @@ public interface IMeasurement {
 	public void addValue(String property,Object value);
 	public Map<String, Object> getValues();
 	public void setValues(Map<String, Object> values);
+	public String getLabel();
 
 }
