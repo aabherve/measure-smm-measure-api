@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\targetSMMMeasureApi-0.1.14.jar -DgroupId=org.measure.smmmeasure.api -DartifactId=SMMMeasureApi -Dversion=0.1.14 -Dpackaging=jar
