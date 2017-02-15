@@ -11,19 +11,14 @@ import org.measure.smm.measure.api.IMeasurement;
 public abstract class DerivedMeasure implements IDerivedMeasure {
 
 	protected Map<String, String> properties = new HashMap<>();;
-	protected Map<String, String> updatedProperties = new HashMap<>();
 	protected Map<String,List<IMeasurement>> referenceMap = new HashMap<>();
 	protected Map<String,List<IMeasurement>> roleMap = new HashMap<>();;
-	
+
 	@Override
-	public void setProperties(Map<String, String> properties) {
-		this.properties  = properties;
+	public Map<String,String> getProperties(){
+		return this.properties;
 	}
-	
-	public Map<String,String> getUpdatedProperties(){
-		return this.updatedProperties;
-	}
-	
+		
 	public String getProperty(String property){
 		String result =  properties.get(property);		
 		if(result != null){

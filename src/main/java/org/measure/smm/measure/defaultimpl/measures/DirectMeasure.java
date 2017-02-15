@@ -9,17 +9,11 @@ import org.measure.smm.measure.api.IMeasurement;
 
 public abstract class DirectMeasure implements IDirectMeasure {
 
-	protected Map<String, String> updatedProperties = new HashMap<>();
-	private  Map<String, String> properties;
+	private  Map<String, String> properties = new HashMap<>();
 	
 	@Override
-	public void setProperties(Map<String, String> properties) {
-		this.properties  = properties;
-	}
-	
-	
-	public Map<String,String> getUpdatedProperties(){
-		return this.updatedProperties;
+	public Map<String,String> getProperties(){
+		return this.properties;
 	}
 	
 	public String getProperty(String property){

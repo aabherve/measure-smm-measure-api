@@ -1,18 +1,9 @@
 package org.measure.smm.measure.defaultimpl.measurements;
 
-import org.measure.smm.measure.api.IMeasurement;
-
 public class IntegerMeasurement extends DefaultMeasurement {
 	
 	public IntegerMeasurement(){
 
-	}
-	
-	public IntegerMeasurement(IMeasurement measurement){
-		Object valueType = measurement.getValues().get("valueType");
-		if(valueType != null && valueType.equals("IntegerMeasurement")){
-			setValues(measurement.getValues());
-		}
 	}
 	
 	public void setValue(Integer value){

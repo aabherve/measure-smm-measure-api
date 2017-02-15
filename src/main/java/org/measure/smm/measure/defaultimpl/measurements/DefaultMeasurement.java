@@ -24,10 +24,6 @@ public class DefaultMeasurement implements IMeasurement {
 		return valueMap;
 	}
 
-	@Override
-	public void setValues(Map<String, Object> values) {
-		this.valueMap = values;		
-	}
 
 	@Override
 	public String getLabel() {
