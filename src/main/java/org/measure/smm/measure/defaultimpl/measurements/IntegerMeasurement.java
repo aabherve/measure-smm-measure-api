@@ -5,7 +5,7 @@ import org.measure.smm.measure.api.IMeasurement;
 public class IntegerMeasurement extends DefaultMeasurement {
 	
 	public IntegerMeasurement(){
-		addValue("valueType","IntegerMeasurement");
+
 	}
 	
 	public IntegerMeasurement(IMeasurement measurement){
@@ -21,12 +21,6 @@ public class IntegerMeasurement extends DefaultMeasurement {
 	
 	public Integer getValue(){
 		return (Integer) getValues().get("value");
-	}
-	
-	
-	@Override
-	public String toString() {
-		return  getValues().get("value").toString();
 	}
 	
 	@Override
