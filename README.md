@@ -5,3 +5,4 @@ API allowing to define SMM measures which can be deployed on Measure Platform
  - Provide helpers services to allow to package a SMM Measure
  
 To define a new SMM Measure, please refered to documentation :
+ https://github.com/aabherve/measure-smm-measure-api/wiki
