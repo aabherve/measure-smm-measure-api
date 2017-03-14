@@ -3,7 +3,9 @@ package org.measure.smm.log;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.measure.smm.measure.api.IMeasurement;
 
@@ -21,14 +23,17 @@ public class MeasureLog implements Serializable{
 	
 	private String measureName;
 	
-	private List<MeasureTestParameters> parameters = new ArrayList<>();
+	private Long measureInstanceId;
 	
+	private List<MeasureLogParameters> parameters = new ArrayList<>();
+		
+	private List<MeasureLogInput> inputs = new ArrayList<>();
 	
-	private List<MeasureTestInput> inputs = new ArrayList<>();
+	private Map<String,String> updatedParameters = new HashMap<>();
 
 	private String exceptionMessage;
 	
-	private  Date exectionDate;
+	private Date exectionDate;
 	
 	
 	public void setLog(MeasureLog log){
@@ -40,6 +45,7 @@ public class MeasureLog implements Serializable{
 		this.inputs   = log.getInputs();
 		this.exceptionMessage  = log.getExceptionMessage();	
 		this.exectionDate = log.getExectionDate();
+		this.measureInstanceId = log.getMeasureInstanceId();
 	}
 
 	public String getExceptionMessage() {
@@ -86,24 +92,32 @@ public class MeasureLog implements Serializable{
 		return measureName;
 	}
 
+	public Map<String, String> getUpdatedParameters() {
+		return updatedParameters;
+	}
+
+	public void setUpdatedParameters(Map<String, String> updatedParameters) {
+		this.updatedParameters = updatedParameters;
+	}
+
 	public void setMeasureName(String measureName) {
 		this.measureName = measureName;
 	}
 
-	public List<MeasureTestParameters> getParameters() {
+	public List<MeasureLogParameters> getParameters() {
 		return parameters;
 	}
 
-	public void setParameters(List<MeasureTestParameters> parameters) {
+	public void setParameters(List<MeasureLogParameters> parameters) {
 		this.parameters = parameters;
 	}
 	
 	
-	public List<MeasureTestInput> getInputs() {
+	public List<MeasureLogInput> getInputs() {
 		return inputs;
 	}
 	
-	public void setInputs(List<MeasureTestInput> inputs) {
+	public void setInputs(List<MeasureLogInput> inputs) {
 		this.inputs = inputs;
 	}	
 	
@@ -114,13 +128,28 @@ public class MeasureLog implements Serializable{
 	public void setExectionDate(Date exectionDate) {
 		this.exectionDate = exectionDate;
 	}
+	
 
-	public class MeasureTestParameters implements Serializable{
+	public Long getMeasureInstanceId() {
+		return measureInstanceId;
+	}
+
+	public void setMeasureInstanceId(Long measureInstanceId) {
+		this.measureInstanceId = measureInstanceId;
+	}
+
+
+
+	public class MeasureLogParameters implements Serializable{
 		private static final long serialVersionUID = 1L;
 		private String name;
 		private String value;
+		
+		public MeasureLogParameters(){
+			
+		}
 
-		public MeasureTestParameters(String propertyName, String propertyValue) {
+		public MeasureLogParameters(String propertyName, String propertyValue) {
 			this.name = propertyName;
 			this.value = propertyValue;
 		}
@@ -139,13 +168,13 @@ public class MeasureLog implements Serializable{
 		}	
 	}
 	
-	public class MeasureTestInput implements Serializable{
+	public class MeasureLogInput implements Serializable{
 		private static final long serialVersionUID = 755611453331572588L;
 		private String role;
 		private IMeasurement value;
 
 
-		public MeasureTestInput(String role, IMeasurement value) {
+		public MeasureLogInput(String role, IMeasurement value) {
 			this.role = role;
 			this.value = value;
 		}

@@ -27,7 +27,7 @@ public class MeasurePackager {
 	public static final String MEATADATAFILE = "MeasureMetadata.xml";
 	public static final String JARFILE = "org.measure.smmmeasure.impl.jar";
 
-	public static void packageMeasure(Path implementationPath, SMMMeasure data, Path measurePath)
+	public static void packageMeasure(Path implementationPath,Path libsPath, SMMMeasure data, Path measurePath)
 			throws JAXBException, IOException {
 		File xmlTmpFile = File.createTempFile("SMMMeasure", "xml");
 
@@ -43,7 +43,11 @@ public class MeasurePackager {
 		ZipOutputStream zipStream = new ZipOutputStream(new FileOutputStream(measurePath.toFile()));
 
 		addToZip(MEATADATAFILE, xmlTmpFile, zipStream);
-		addToZip(JARFILE, implementationPath.toFile(), zipStream);
+		addToZip(implementationPath.toFile().getName(), implementationPath.toFile(), zipStream);
+		
+		for(File lib : libsPath.toFile().listFiles()){
+			addToZip("lib/"+ lib.getName(), lib, zipStream);
+		}
 
 		zipStream.close();
 	}

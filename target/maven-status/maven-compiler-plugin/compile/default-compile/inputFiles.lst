@@ -5,13 +5,12 @@ C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\model\ScopeProperty.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\defaultimpl\measures\DerivedMeasure.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\api\IDirectMeasure.java
-C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\remote\RemoteMeasureInstanceData.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\defaultimpl\measures\DirectMeasure.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\service\MeasurePackager.java
-C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\remote\RemoteExecutionResult.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\defaultimpl\measurements\IntegerMeasurement.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\model\MeasureUnite.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\api\IMeasure.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\model\MeasureReference.java
+C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\remote\RemoteMeasureInstance.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\api\IMeasurement.java
 C:\Users\aabherve\Desktop\Platform\work\SMMMeasureApi\src\main\java\org\measure\smm\measure\defaultimpl\measurements\DefaultMeasurement.java
